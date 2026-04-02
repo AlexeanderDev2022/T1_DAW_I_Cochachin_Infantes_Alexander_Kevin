@@ -18,8 +18,10 @@ public class Curso {
     @GeneratedValue(strategy = GenerationType.AUTO)
     public Long id;
     @NotBlank
-    public String nombre;
-    @NotBlank
-    public String carrera;
+    @NotBlank(message = "El nombre del curso es obligatorio")
+    private String nombre;
+
+    @NotBlank(message = "La carrera del curso es obligatoria")
+    private String carrera;
     public String especificacion;
 }

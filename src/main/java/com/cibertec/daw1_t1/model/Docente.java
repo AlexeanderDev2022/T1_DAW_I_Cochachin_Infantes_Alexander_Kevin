@@ -21,16 +21,18 @@ public class Docente {
     @GeneratedValue(strategy = GenerationType.AUTO)
     public Long id;
 
-    @NotBlank
-    public String nombres;
 
-    @NotBlank
-    public String apellidos;
+    @NotBlank(message = "El nombre del docente es obligatorio")
+    private String nombres;
 
-    @NotBlank
-    public String carrera;
-    @NotBlank
-    public String facultad;
+    @NotBlank(message = "El apellido del docente es obligatorio")
+    private String apellidos;
+
+    @NotBlank(message = "La carrera es obligatoria")
+    private String carrera;
+
+    @NotBlank(message = "La facultad es obligatoria")
+    private String facultad;
 
     public String especialisacion;
 }
