@@ -15,13 +15,13 @@ import lombok.*;
 @Data
 public class Curso {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    public Long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     @NotBlank
     @NotBlank(message = "El nombre del curso es obligatorio")
     private String nombre;
 
     @NotBlank(message = "La carrera del curso es obligatoria")
     private String carrera;
-    public String especificacion;
+    private String especificacion;
 }

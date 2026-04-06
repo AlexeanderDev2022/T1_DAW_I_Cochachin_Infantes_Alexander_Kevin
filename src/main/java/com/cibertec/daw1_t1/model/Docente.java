@@ -18,8 +18,8 @@ import lombok.Setter;
 @Entity
 public class Docente {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    public Long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
 
     @NotBlank(message = "El nombre del docente es obligatorio")
@@ -34,5 +34,5 @@ public class Docente {
     @NotBlank(message = "La facultad es obligatoria")
     private String facultad;
 
-    public String especialisacion;
+    private String especialisacion;
 }
